@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Form, Alert } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import { Button, Form, Alert } from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../context/UserAuthContext";
 
@@ -62,6 +61,13 @@ const Login = () => {
           </div>
         </Form>
         <hr />
+        <Link to="/phonesignin">
+          <div className="d-grid gap-2 py-3">
+            <Button onClick='/PhoneSi' variant="success" type="Submit">
+              SignIn with Phone Number
+            </Button>
+          </div>
+          </Link>
         <div>
           <GoogleButton
             className="g-btn"
